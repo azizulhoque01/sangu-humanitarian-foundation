@@ -13,6 +13,18 @@ export const siteConfig = {
    */
   siteUrl: 'https://sangu-foundation.azizulh-qtec.workers.dev',
 
+  /**
+   * Analytics: only added to production builds, so `npm run dev` visits are not counted.
+   * Fill ONE of them (or both); leave '' to turn it off.
+   * - gtmContainerId: Google Tag Manager, e.g. 'GTM-ABC1234'. Add the GA4 tag inside GTM.
+   * - gaMeasurementId: Google Analytics 4 directly (gtag.js), e.g. 'G-ABC123XYZ'.
+   *   Don't also add the same GA4 ID inside GTM, or every visit is counted twice.
+   */
+  analytics: {
+    gtmContainerId: 'GTM-W6394D3J',
+    gaMeasurementId: '',
+  },
+
   defaultLang: 'bn',
   /**
    * Each language gets its own URL: default → "/", others → "/en/", "/ar/".

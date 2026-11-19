@@ -93,14 +93,67 @@ function localize(html, code) {
     .replace(SEO_BLOCK, `<!-- SEO:START -->\n    ${seoTags(code)}\n    <!-- SEO:END -->`);
 }
 
+/** Read an analytics ID from siteConfig.analytics and check its format */
+function analyticsId(key, pattern, example) {
+  const id = siteConfig.analytics?.[key]?.trim();
+  if (id && !pattern.test(id)) throw new Error(`analytics.${key} "${id}" should look like ${example}`);
+  return id || '';
+}
+
+/** Analytics snippets: { head, body }, empty strings when no ID is set */
+function analyticsSnippets() {
+  const gtm = analyticsId('gtmContainerId', /^GTM-[A-Z0-9]+$/i, 'GTM-XXXXXXX');
+  const ga = analyticsId('gaMeasurementId', /^G-[A-Z0-9]+$/i, 'G-XXXXXXXXXX');
+  const head = [];
+  let body = '';
+
+  if (gtm) {
+    head.push(`<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','${gtm}');</script>
+    <!-- End Google Tag Manager -->`);
+    body = `<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${gtm}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->`;
+  }
+  if (ga) {
+    head.push(`<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${ga}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${ga}');
+    </script>`);
+  }
+  return { head: head.join('\n    '), body };
+}
+
 export function seoPlugin() {
+  let isBuild = false;
   return {
     name: 'shf-seo',
 
-    // Default-language tags in index.html (dev server + build)
+    configResolved(config) {
+      isBuild = config.command === 'build';
+    },
+
+    // Default-language tags in index.html (dev server + build); analytics only in the build
     transformIndexHtml: {
       order: 'post',
-      handler: (html) => localize(html, siteConfig.defaultLang),
+      handler: (html) => {
+        let out = localize(html, siteConfig.defaultLang);
+        if (!isBuild) return out;
+        const { head, body } = analyticsSnippets();
+        // head: right after <meta viewport> so <meta charset> stays first; body: right after <body>
+        if (head) out = out.replace(/(<meta name="viewport"[^>]*>)/, `$1\n    ${head}`);
+        if (body) out = out.replace(/(<body[^>]*>)/, `$1\n    ${body}`);
+        return out;
+      },
     },
 
     // Extra language pages for the build: dist/<code>/index.html

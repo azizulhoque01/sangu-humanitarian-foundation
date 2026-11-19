@@ -76,6 +76,9 @@ async function switchLang(lang) {
   app.classList.add('is-switching');
   await new Promise((r) => setTimeout(r, 220));
   await render(lang);
+  // Analytics: GTM reads this as a custom event; GA4 (gtag) gets it as an event too
+  if (window.gtag) window.gtag('event', 'language_change', { language: lang });
+  else window.dataLayer?.push({ event: 'language_change', language: lang });
   window.scrollTo({ top: y, behavior: 'instant' });
   requestAnimationFrame(() => app.classList.remove('is-switching'));
 }

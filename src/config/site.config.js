@@ -11,7 +11,7 @@ export const siteConfig = {
    * Public address of the site, with no trailing slash. Social previews (WhatsApp, Facebook…)
    * need full URLs, so change this when you move to a custom domain.
    */
-  siteUrl: 'https://sangu-humanitarian-foundation.azizulh-qtec.workers.dev',
+  siteUrl: 'https://sangu-foundation.azizulh-qtec.workers.dev',
 
   defaultLang: 'bn',
   /**

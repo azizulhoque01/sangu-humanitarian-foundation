@@ -7,14 +7,26 @@
  * (see src/services/content.js → getSiteConfig()).
  */
 export const siteConfig = {
+  /**
+   * Public address of the site, with no trailing slash. Social previews (WhatsApp, Facebook…)
+   * need full URLs, so change this when you move to a custom domain.
+   */
+  siteUrl: 'https://sangu-humanitarian-foundation.azizulh-qtec.workers.dev',
+
   defaultLang: 'bn',
+  /**
+   * Each language gets its own URL: default → "/", others → "/en/", "/ar/".
+   * ogLocale is the Facebook/Open Graph locale code.
+   */
   languages: [
-    { code: 'bn', label: 'বাংলা', short: 'বাং', dir: 'ltr', intl: 'bn-BD' },
-    { code: 'en', label: 'English', short: 'EN', dir: 'ltr', intl: 'en-US' },
-    { code: 'ar', label: 'العربية', short: 'عربي', dir: 'rtl', intl: 'ar-EG' },
+    { code: 'bn', label: 'বাংলা', short: 'বাং', dir: 'ltr', intl: 'bn-BD', ogLocale: 'bn_BD' },
+    { code: 'en', label: 'English', short: 'EN', dir: 'ltr', intl: 'en-US', ogLocale: 'en_US' },
+    { code: 'ar', label: 'العربية', short: 'عربي', dir: 'rtl', intl: 'ar-EG', ogLocale: 'ar_AR' },
   ],
 
   logo: '/images/logo.jpeg',
+  /** Social share image (1200×630) per language. Regenerate with `npm run og`. */
+  ogImage: (lang) => `/images/og/og-${lang}.jpg`,
   established: 2026,
 
   contact: {

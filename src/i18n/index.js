@@ -15,10 +15,25 @@ export const getLanguage = (code = state.lang) =>
   siteConfig.languages.find((l) => l.code === code) ?? siteConfig.languages[0];
 export const isSupported = (code) => siteConfig.languages.some((l) => l.code === code);
 
-/** Language to start with: ?lang= → saved choice → default */
+/** URL path of a language: default → "/", others → "/en/", "/ar/" */
+export const langPath = (code) => (code === siteConfig.defaultLang ? '/' : `/${code}/`);
+
+/** Language from the URL path ("/en/…" → "en"), or null */
+function langFromPath() {
+  const first = location.pathname.split('/').filter(Boolean)[0];
+  return isSupported(first) ? first : null;
+}
+
+/**
+ * Language to start with:
+ * /en/ or /ar/ path → ?lang= (old links) → saved choice → default
+ * A language path always wins so shared links open in the language they were shared in.
+ */
 export function detectInitialLang() {
-  const fromUrl = new URLSearchParams(location.search).get('lang');
-  if (isSupported(fromUrl)) return fromUrl;
+  const fromPath = langFromPath();
+  if (fromPath) return fromPath;
+  const fromQuery = new URLSearchParams(location.search).get('lang');
+  if (isSupported(fromQuery)) return fromQuery;
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (isSupported(saved)) return saved;
@@ -34,12 +49,12 @@ export function setLang(code, dict) {
   document.documentElement.dir = dir;
   try { localStorage.setItem(STORAGE_KEY, code); } catch { /* ignore */ }
 
-  // Keep ?lang= in the URL in sync (so links can be shared) without reloading
+  // Keep the URL in sync (/ , /en/ , /ar/) so the address bar is always shareable.
+  // Every language path is a real built page (see plugins/seo.js), so reloading it works.
   const url = new URL(location.href);
-  if (url.searchParams.has('lang') || code !== siteConfig.defaultLang) {
-    url.searchParams.set('lang', code);
-    history.replaceState(null, '', url);
-  }
+  url.pathname = langPath(code);
+  url.searchParams.delete('lang');
+  if (url.href !== location.href) history.replaceState(null, '', url);
 }
 
 /** t('a.b.c', fallback) */

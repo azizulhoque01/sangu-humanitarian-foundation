@@ -26,6 +26,26 @@ npm run preview   # serve the build
 
 > ⚠ Everything marked `PLACEHOLDER` in `site.config.js` (phone, email, payment numbers, socials, map) must be replaced with the real details before launch.
 
+## Language URLs & social sharing
+
+Each language has its own URL, and each URL has its own share preview (title, description, image):
+
+| URL | Language |
+|---|---|
+| `/` | বাংলা (default) |
+| `/en/` | English |
+| `/ar/` | العربية |
+
+- WhatsApp, Facebook and other bots don't run JavaScript, so `plugins/seo.js` writes the meta tags
+  into the HTML at build time and creates `dist/en/index.html` and `dist/ar/index.html`.
+- The text comes from `meta.title`, `meta.description` and `brand.*` in the locale files.
+- **Share images** live in `public/images/og/og-<lang>.jpg` (1200×630). After changing the logo, name or motto, regenerate them with
+  `npm run og` (needs Chrome installed).
+- **Custom domain:** update `siteUrl` in `site.config.js`, since social previews need full URLs.
+- **Preview still looks old?** The platforms cache previews:
+  - Facebook: <https://developers.facebook.com/tools/debug/> → **Scrape Again**
+  - WhatsApp: share the link with something extra added, e.g. `…/en/?v=2`, to get a fresh preview.
+
 ## How it is built
 
 ```

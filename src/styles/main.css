@@ -77,10 +77,13 @@
     scroll-behavior: smooth;
     scroll-padding-top: var(--header-h);
   }
+  /* Never allow sideways scrolling on phones.
+     `clip` (unlike `hidden`) doesn't create a scroll container, so sticky elements keep working. */
+  html, body { overflow-x: clip; }
   body {
     @apply bg-surface text-ink font-sans antialiased;
-    overflow-x: hidden;
   }
+  main, footer { overflow-x: clip; }
   /* Bangla & Arabic scripts need a little more line height */
   html:lang(bn) body, html:lang(ar) body { line-height: 1.75; }
 
@@ -212,9 +215,16 @@
 }
 
 /* Mobile drawer */
-.drawer { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+/* The layer is clipped so the off-screen drawer can never widen the page */
+.drawer-layer { position: fixed; inset: 0; z-index: 60; overflow: hidden; pointer-events: none; }
+.drawer {
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: auto;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s linear 0.4s;
+}
 [dir="rtl"] .drawer { transform: translateX(-100%); }
-.drawer.is-open { transform: none; }
+.drawer.is-open { transform: none; visibility: visible; transition-delay: 0s; }
 .drawer-backdrop { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
 .drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
 

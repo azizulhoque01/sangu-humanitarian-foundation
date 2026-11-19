@@ -64,8 +64,9 @@ export function Header({ c, cfg, lang }) {
     </header>
 
     <!-- Mobile drawer -->
-    <div class="drawer-backdrop fixed inset-0 z-60 bg-primary-950/50 backdrop-blur-sm" data-drawer-close></div>
-    <aside id="mobile-drawer" class="drawer fixed inset-y-0 end-0 z-70 flex w-[min(88vw,22rem)] flex-col bg-white shadow-2xl" aria-label="${c.actions.menu}" aria-hidden="true">
+    <div class="drawer-layer">
+    <div class="drawer-backdrop absolute inset-0 bg-primary-950/50 backdrop-blur-sm" data-drawer-close></div>
+    <aside id="mobile-drawer" class="drawer absolute inset-y-0 end-0 flex w-[min(88vw,22rem)] flex-col bg-white shadow-2xl" aria-label="${c.actions.menu}" aria-hidden="true">
       <div class="flex items-center justify-between border-b border-primary-100 p-4">
         <img src="${cfg.logo}" alt="" width="44" height="44" class="size-11 rounded-full" />
         <button type="button" class="grid size-10 place-items-center rounded-full text-ink-soft hover:bg-primary-50" data-drawer-close aria-label="${c.actions.close}">
@@ -86,5 +87,6 @@ export function Header({ c, cfg, lang }) {
         <a href="#donate" data-drawer-link class="btn btn-primary w-full">${icon('hand-heart', 'size-5')}${c.actions.donate}</a>
       </div>
     </aside>
+    </div>
   `;
 }

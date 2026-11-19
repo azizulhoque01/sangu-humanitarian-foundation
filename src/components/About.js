@@ -10,7 +10,7 @@ export function About({ c, cfg }) {
       <div class="container-x grid items-center gap-16 lg:grid-cols-2">
         <!-- Visual: no beneficiary photos (constitution §24): a brand illustration instead -->
         <div class="relative" data-animate="slide-start">
-          <div class="relative overflow-hidden rounded-[2rem] bg-linear-to-br from-primary-700 via-primary-800 to-primary-950 p-8 text-white shadow-lift sm:p-12">
+          <div class="relative overflow-hidden rounded-[2rem] bg-linear-to-br from-primary-700 via-primary-800 to-primary-950 p-8 pb-16 text-white shadow-lift sm:p-12 sm:pb-16 lg:pb-12">
             <div class="bg-dots absolute inset-0 opacity-30 invert"></div>
             <div class="absolute -end-16 -top-16 size-56 rounded-full bg-secondary-500/30 blur-2xl"></div>
             <div class="relative">
@@ -32,7 +32,7 @@ export function About({ c, cfg }) {
             </svg>
           </div>
           <!-- floating "working area" card -->
-          <div class="card absolute -bottom-10 end-4 max-w-xs p-5! sm:end-[-1.5rem]" data-animate="fade-up" style="--d:300ms">
+          <div class="card relative mx-4 -mt-8 p-5! sm:ms-auto sm:max-w-xs lg:absolute lg:-bottom-10 lg:-end-6 lg:m-0" data-animate="fade-up" style="--d:300ms">
             <div class="flex gap-3">
               <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-secondary-100 text-secondary-600">${icon('map-pin', 'size-5')}</span>
               <div>

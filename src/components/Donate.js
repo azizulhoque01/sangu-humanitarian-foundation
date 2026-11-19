@@ -43,9 +43,9 @@ function BankMethod(m, c, i) {
           <span class="grid size-11 place-items-center rounded-xl text-white shadow-md" style="background:${m.color}">${iconFor(m.id, 'size-5')}</span>
           <p class="font-bold text-primary-900">${c.donate.methods[m.id]}</p>
         </div>
-        <div class="flex items-center gap-2 rounded-xl bg-surface-muted px-3 py-2">
+        <div class="flex w-full flex-wrap items-center gap-2 rounded-xl bg-surface-muted px-3 py-2 sm:w-auto">
           <span class="text-xs text-ink-soft">${L.accountNumber}</span>
-          <span class="font-mono font-semibold text-ink" dir="ltr">${m.number}</span>
+          <span class="me-auto whitespace-nowrap font-mono font-semibold text-ink" dir="ltr">${m.number}</span>
           ${CopyButton(m.number, c)}
         </div>
       </div>

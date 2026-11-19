@@ -39,10 +39,10 @@ export function Header({ c, cfg, lang }) {
       ${TopBar({ c, cfg, lang })}
       <div class="container-x">
         <nav class="navbar flex items-center justify-between gap-4 transition-all duration-300" aria-label="Main">
-          <a href="#hero" class="flex min-w-0 items-center gap-3">
-            <img src="${cfg.logo}" alt="${c.brand.name}" width="52" height="52" class="size-12 shrink-0 rounded-full bg-white object-cover shadow-md ring-2 ring-white/60 sm:size-13" />
+          <a href="#hero" class="flex min-w-0 items-center gap-2.5 sm:gap-3">
+            <img src="${cfg.logo}" alt="${c.brand.name}" width="52" height="52" class="brand-logo size-12 shrink-0 rounded-full bg-white object-cover shadow-md ring-2 ring-white/60 sm:size-13" />
             <span class="min-w-0 leading-tight">
-              <span class="brand-name block truncate text-base font-bold sm:text-lg">${c.brand.name}</span>
+              <span class="brand-name block truncate text-[0.9rem] font-bold sm:text-lg">${c.brand.name}</span>
               <span class="brand-sub block truncate text-xs font-medium" lang="${lang === 'en' ? 'bn' : 'en'}">${c.brand.subname}</span>
             </span>
           </a>
@@ -55,7 +55,7 @@ export function Header({ c, cfg, lang }) {
             <a href="#donate" class="btn btn-primary btn-shine hidden px-5 py-2.5 sm:inline-flex">
               ${icon('hand-heart', 'size-5')}${c.actions.donate}
             </a>
-            <button type="button" class="menu-btn grid size-11 place-items-center rounded-full transition xl:hidden" data-drawer-open aria-label="${c.actions.menu}" aria-controls="mobile-drawer" aria-expanded="false">
+            <button type="button" class="menu-btn grid size-10 sm:size-11 place-items-center rounded-full transition xl:hidden" data-drawer-open aria-label="${c.actions.menu}" aria-controls="mobile-drawer" aria-expanded="false">
               ${icon('menu', 'size-6')}
             </button>
           </div>

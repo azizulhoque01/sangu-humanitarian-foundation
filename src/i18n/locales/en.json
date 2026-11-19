@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "title": "Sangu Humanitarian Foundation | Together for Humanity",
+    "description": "Sangu Humanitarian Foundation is a voluntary, non-political, non-communal and non-profit humanitarian organisation standing beside the helpless, the poor and the underprivileged."
+  },
+  "brand": {
+    "name": "Sangu Humanitarian Foundation",
+    "subname": "সাঙ্গু মানবকল্যাণ ফাউন্ডেশন",
+    "motto": "Unity is our strength, humanity is our identity.",
+    "tagline": "From the banks of the Sangu to the path of humanity, moving forward together."
+  },
+  "nav": {
+    "hero": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "donate": "Donate",
+    "involved": "Get Involved",
+    "transparency": "Transparency",
+    "contact": "Contact"
+  },
+  "actions": {
+    "donate": "Donate Now",
+    "joinVolunteer": "Become a Volunteer",
+    "learnMore": "Learn more",
+    "ourPrograms": "Our Programs",
+    "copy": "Copy",
+    "copied": "Copied",
+    "backToTop": "Back to top",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "Language"
+  },
+  "topbar": {
+    "est": "Est."
+  },
+  "hero": {
+    "eyebrow": "Rooted in Sangu, United for Humanity",
+    "titleLead": "Unity is our strength,",
+    "titleHighlight": "humanity is our identity.",
+    "subtitle": "A voluntary humanitarian organisation built on the friendship, love and unity of friends who grew up on the banks of the Sangu river. Our purpose is to stand beside the helpless, the poor and people in distress.",
+    "badges": [
+      "Voluntary",
+      "Non-political",
+      "Non-communal",
+      "Non-profit"
+    ],
+    "logoCaption": "Established 2026"
+  },
+  "stats": {
+    "programs": "Program areas",
+    "objectives": "Core objectives",
+    "principles": "Guiding principles",
+    "founded": "Year founded"
+  },
+  "about": {
+    "eyebrow": "Who we are",
+    "title": "From friendship to the service of humanity",
+    "story": [
+      "Sangu Humanitarian Foundation is a voluntary, humanitarian and social welfare organisation. It began with the friendship, love, unity and mutual support of friends who grew up on the banks of the Sangu river.",
+      "The organisation was founded to stand beside the helpless, the poor, the underprivileged and people in distress."
+    ],
+    "areaTitle": "Where we work",
+    "area": "Our work starts in the areas along the Sangu river and its surroundings. With the consent of members and as our capacity grows, we will widen our reach.",
+    "natureTitle": "Our nature",
+    "nature": [
+      {
+        "id": "humanitarian",
+        "title": "Fully humanitarian",
+        "text": "A purely humanitarian, public-welfare organisation."
+      },
+      {
+        "id": "nonprofit",
+        "title": "Non-profit",
+        "text": "Not a business or profit-making institution."
+      },
+      {
+        "id": "nonpolitical",
+        "title": "Non-political & non-communal",
+        "text": "All our activities are non-political and non-communal."
+      },
+      {
+        "id": "integrity",
+        "title": "Protected resources",
+        "text": "Funds and assets are never used for personal gain."
+      }
+    ],
+    "notice": "The organisation currently operates informally. Legal registration will be pursued in the future as needed."
+  },
+  "visionMission": {
+    "eyebrow": "Vision & Mission",
+    "title": "The society we dream of",
+    "vision": {
+      "title": "Our Vision",
+      "text": "To build a humane, cooperative, equitable and beautiful society where every person has the chance to receive dignity, compassion and the support they need."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To stand beside helpless and underprivileged people through the combined capacity, time, labour and financial support of friends, members and well-wishers, and to run regular humanitarian and social welfare activities."
+    }
+  },
+  "programs": {
+    "eyebrow": "Humanitarian programs",
+    "title": "How we stand beside people",
+    "subtitle": "Programs are taken up based on the organisation's capacity, available funds and community needs.",
+    "items": [
+      {
+        "id": "housing",
+        "title": "Housing support",
+        "points": [
+          "Helping helpless families build homes",
+          "Repairing and renovating dilapidated houses",
+          "Providing tin sheets, wood and building materials"
+        ]
+      },
+      {
+        "id": "family",
+        "title": "Marriage & family support",
+        "points": [
+          "Financial help for weddings in low-income families",
+          "Providing essential items and gifts",
+          "Support during urgent family crises"
+        ]
+      },
+      {
+        "id": "medical",
+        "title": "Medical support",
+        "points": [
+          "Helping with treatment costs for poor patients",
+          "Covering medicine and diagnostic expenses",
+          "Arranging emergency blood donation",
+          "Standing by accident and critical-illness victims"
+        ]
+      },
+      {
+        "id": "ramadan",
+        "title": "Ramadan & food support",
+        "points": [
+          "Iftar distribution during Ramadan",
+          "Food supplies for families in need",
+          "Support for suhoor and iftar",
+          "Ramadan food packages"
+        ]
+      },
+      {
+        "id": "education",
+        "title": "Education support",
+        "points": [
+          "Books, notebooks and learning materials for poor students",
+          "Scholarships for talented students in need",
+          "Helping students continue their education"
+        ]
+      },
+      {
+        "id": "winter",
+        "title": "Winter clothes & clothing",
+        "points": [
+          "Distributing blankets and warm clothes",
+          "Clothes and essentials for children"
+        ]
+      },
+      {
+        "id": "disaster",
+        "title": "Disaster relief",
+        "points": [
+          "Relief during floods and natural disasters",
+          "Supplying clean water, food and essentials",
+          "Helping affected families rebuild"
+        ]
+      },
+      {
+        "id": "social",
+        "title": "Social initiatives",
+        "points": [
+          "Tree planting and environmental care",
+          "Cleanliness drives",
+          "Blood donation and health awareness",
+          "Support for orphans, the elderly and people with disabilities"
+        ]
+      }
+    ]
+  },
+  "objectives": {
+    "eyebrow": "Core objectives",
+    "title": "Our 12 committed objectives",
+    "items": [
+      "Supporting the livelihoods of helpless and poor people.",
+      "Creating educational opportunities for poor and talented students.",
+      "Helping sick and helpless patients get treatment.",
+      "Helping poor families build and repair their homes.",
+      "Supporting low-income families with weddings and family needs.",
+      "Providing iftar, food and other aid during Ramadan.",
+      "Standing beside people affected by floods, cyclones and natural disasters.",
+      "Distributing winter clothes, clothing and food.",
+      "Running blood donation and health awareness activities.",
+      "Working for orphans, the elderly, people with disabilities and the underprivileged.",
+      "Promoting tree planting, environmental protection and social awareness.",
+      "Taking other humanitarian and public-welfare initiatives as society needs."
+    ]
+  },
+  "principles": {
+    "eyebrow": "Principles & ideals",
+    "title": "The values that guide us",
+    "items": [
+      {
+        "id": "humanity",
+        "title": "Humanity",
+        "text": "Human welfare is our main purpose."
+      },
+      {
+        "id": "honesty",
+        "title": "Honesty",
+        "text": "Upholding ethics and truthfulness in everything we do."
+      },
+      {
+        "id": "transparency",
+        "title": "Transparency",
+        "text": "Keeping income and expenses clear to everyone."
+      },
+      {
+        "id": "unity",
+        "title": "Unity",
+        "text": "Working through mutual respect and cooperation."
+      },
+      {
+        "id": "equality",
+        "title": "Equality",
+        "text": "Helping regardless of religion, race, gender, profession or wealth."
+      },
+      {
+        "id": "accountability",
+        "title": "Accountability",
+        "text": "Taking responsibility for every decision and activity."
+      },
+      {
+        "id": "service",
+        "title": "Selfless service",
+        "text": "Putting people's welfare before personal gain."
+      }
+    ],
+    "commitment": "Each of us will stand beside people according to our own ability. No one's dignity or rights in the organisation depend on how much they contribute."
+  },
+  "donate": {
+    "eyebrow": "Donate",
+    "title": "Your small help can be someone's biggest hope",
+    "quote": "Everyone contributes as much as they are able.",
+    "quoteSource": "Our voluntary contribution policy",
+    "policy": [
+      "No fixed monthly or yearly contribution is required.",
+      "Everyone can give voluntarily, according to their means.",
+      "The size of a contribution never decides anyone's standing or say."
+    ],
+    "fundsTitle": "Where your donation goes",
+    "funds": [
+      {
+        "id": "general",
+        "title": "General humanitarian fund"
+      },
+      {
+        "id": "medical",
+        "title": "Medical support fund"
+      },
+      {
+        "id": "education",
+        "title": "Education support fund"
+      },
+      {
+        "id": "ramadan",
+        "title": "Ramadan & food fund"
+      },
+      {
+        "id": "disaster",
+        "title": "Disaster relief fund"
+      },
+      {
+        "id": "housing",
+        "title": "Housing & family support fund"
+      }
+    ],
+    "methodsTitle": "Ways to donate",
+    "methods": {
+      "bkash": "bKash",
+      "nagad": "Nagad",
+      "rocket": "Rocket",
+      "bank": "Bank account"
+    },
+    "accountTypes": {
+      "personal": "Personal"
+    },
+    "bankLabels": {
+      "accountName": "Account name",
+      "accountNumber": "Account number",
+      "bank": "Bank",
+      "branch": "Branch"
+    },
+    "nonMonetaryTitle": "Time is valuable too",
+    "nonMonetary": "Even if you cannot give money, you can contribute your time, labour, skills and advice. We value every contribution, big or small.",
+    "receiptNote": "The date, amount and source of every donation is recorded, and financial reports are published regularly."
+  },
+  "involved": {
+    "eyebrow": "Get involved",
+    "title": "Join us on this journey of humanity",
+    "subtitle": "For now the organisation is run by its founding friends. Membership will later open to interested and suitable people, so register your interest today.",
+    "typesTitle": "Types of membership",
+    "types": [
+      {
+        "id": "founder",
+        "title": "Founding member",
+        "text": "Those who took the initiative to found the organisation and run its first activities."
+      },
+      {
+        "id": "member",
+        "title": "General member",
+        "text": "Interested and suitable people who join the organisation in the future."
+      },
+      {
+        "id": "associate",
+        "title": "Associate member",
+        "text": "Those who help with money, time, labour, skills or advice."
+      },
+      {
+        "id": "wellwisher",
+        "title": "Well-wisher",
+        "text": "Those who support our purpose and help with various initiatives."
+      }
+    ],
+    "form": {
+      "title": "Register your interest",
+      "subtitle": "Fill in the form and we will get in touch with you.",
+      "name": "Your name",
+      "phone": "Mobile number",
+      "email": "Email (optional)",
+      "interest": "How would you like to help?",
+      "interests": [
+        "As a volunteer",
+        "With financial support",
+        "With skills & advice",
+        "I want to become a member"
+      ],
+      "message": "Your message (optional)",
+      "submit": "Send",
+      "sending": "Sending…",
+      "success": "Thank you! We have received your interest and will contact you soon.",
+      "error": "Sorry, it could not be sent. Please try again.",
+      "errors": {
+        "required": "Please fill in this field",
+        "phone": "Enter a valid mobile number",
+        "email": "Enter a valid email"
+      }
+    }
+  },
+  "transparency": {
+    "eyebrow": "Transparency & accountability",
+    "title": "Every taka accounted for, every action owned",
+    "subtitle": "Under our constitution, transparency and accountability are the foundation of all our work.",
+    "items": [
+      {
+        "id": "record",
+        "title": "Every donation recorded",
+        "text": "The date, amount and source of each donation is documented."
+      },
+      {
+        "id": "receipt",
+        "title": "Proof of every expense",
+        "text": "A receipt or proof is kept for every expense."
+      },
+      {
+        "id": "project",
+        "title": "Project-wise accounts",
+        "text": "Income and expenses are kept and published separately for each project."
+      },
+      {
+        "id": "report",
+        "title": "Regular reports",
+        "text": "Periodic financial reports, plus an overall report at least once a year."
+      },
+      {
+        "id": "approval",
+        "title": "Collective decisions",
+        "text": "No single person makes major financial or organisational decisions."
+      },
+      {
+        "id": "dignity",
+        "title": "Dignity & privacy",
+        "text": "The personal information, dignity and privacy of aid recipients are protected."
+      }
+    ]
+  },
+  "committee": {
+    "eyebrow": "Executive committee",
+    "title": "The people entrusted with our work",
+    "subtitle": "In the first phase, the committee is being formed from the founding members.",
+    "tba": "To be announced",
+    "roles": [
+      {
+        "id": "president",
+        "title": "President",
+        "duty": "Overall leadership and oversight of key activities."
+      },
+      {
+        "id": "vicePresident",
+        "title": "Vice President",
+        "duty": "Assists the President and acts on their behalf when needed."
+      },
+      {
+        "id": "generalSecretary",
+        "title": "General Secretary",
+        "duty": "Runs organisational activities and implements decisions."
+      },
+      {
+        "id": "jointSecretary",
+        "title": "Joint General Secretary",
+        "duty": "Assists the General Secretary in running activities."
+      },
+      {
+        "id": "treasurer",
+        "title": "Treasurer",
+        "duty": "Keeps the accounts and presents financial reports."
+      },
+      {
+        "id": "organizingSecretary",
+        "title": "Organising Secretary",
+        "duty": "Keeps in touch with members and supports organisational work."
+      },
+      {
+        "id": "publicitySecretary",
+        "title": "Publicity & Communication Secretary",
+        "duty": "Activity reports, communication and record keeping."
+      },
+      {
+        "id": "executiveMembers",
+        "title": "Executive Members",
+        "duty": "Plan and carry out humanitarian activities."
+      }
+    ]
+  },
+  "pledge": {
+    "eyebrow": "Our pledge",
+    "lines": [
+      "We will never judge anyone by their means. We will honour every contribution, big or small.",
+      "We will stand by people in their sorrow and reach out a helping hand in hard times.",
+      "Our greatest identity: we are human, and we want to stand by one another."
+    ],
+    "closing": "Unity is our strength, humanity is our identity."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Talk to us",
+    "subtitle": "Need help, want to donate or volunteer? Get in touch about anything.",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "address": "Working area",
+    "addressValue": "Areas along the Sangu river and its surroundings",
+    "map": "View on map"
+  },
+  "footer": {
+    "about": "A voluntary, non-political, non-communal and non-profit humanitarian organisation founded by friends who grew up on the banks of the Sangu river.",
+    "quickLinks": "Quick links",
+    "programs": "Programs",
+    "followUs": "Follow us",
+    "rights": "All rights reserved.",
+    "closing": "Rooted in Sangu, United for Humanity."
+  }
+}

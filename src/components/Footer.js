@@ -42,9 +42,16 @@ export function Footer({ c, cfg }) {
       </div>
 
       <div class="border-t border-white/10">
-        <div class="container-x flex flex-col items-center justify-between gap-3 py-6 text-sm sm:flex-row">
+        <div class="container-x flex flex-col items-center justify-between gap-3 py-6 text-center text-sm lg:flex-row lg:text-start">
           <p>© ${year} ${c.brand.name}. ${c.footer.rights}</p>
-          <p class="italic text-secondary-300" lang="en">${c.footer.closing}</p>
+          <p class="italic text-secondary-300" lang="en" dir="ltr">${c.footer.closing}</p>
+          ${cfg.credit
+            ? html`<p>
+                ${c.footer.credit}
+                <a href="${cfg.credit.url}" target="_blank" rel="noopener" lang="en"
+                  class="font-semibold text-white underline decoration-secondary-400 decoration-2 underline-offset-4 transition hover:text-secondary-300">${cfg.credit.name}</a>
+              </p>`
+            : ''}
         </div>
       </div>
     </footer>

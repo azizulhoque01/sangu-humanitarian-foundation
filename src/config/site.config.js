@@ -58,6 +58,12 @@ export const siteConfig = {
     { id: 'founded', value: 2026, plain: true },
   ],
 
+  /** Footer credit. The "Design & Developed by" label is translated in locales → footer.credit */
+  credit: {
+    name: 'Azizul Hoque',
+    url: 'https://azizulhoque01.github.io/azizulhoque/',
+  },
+
   /** Committee members. Leave name/photo null to show "To be announced". */
   committee: {
     president: { name: null, photo: null },
